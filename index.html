@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandan Vura - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <div class="logo">Chandan Vura</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Hi, I'm Chandan Vura</h1>
+        <p>A passionate Software Developer with expertise in Java, Web Development, and Database Management.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+      <div class="hero-image">
+        <!-- <img src="assets/profile.jpg" alt="Chandan Vura"> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a Computer Science and Engineering graduate from Parul University, Vadodara. I have hands-on experience in front-end development, database management, and building scalable web applications. I'm passionate about solving problems and learning new technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">Java</div>
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Angular</div>
+        <div class="skill">Git/GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project" data-modal="modal1">
+        <img src="assets/project1.png" alt="Quiz Hosting Platform">
+        <h3>Quiz Hosting Platform</h3>
+        <p>A responsive web application for creating and managing quizzes. Built with HTML, CSS, JavaScript, PHP, and MySQL.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project" data-modal="modal2">
+        <img src="assets/project2.png" alt="Job Portal Application">
+        <h3>Job Portal Application</h3>
+        <p>A Java-based job portal with a MySQL database. Features secure authentication and optimized queries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Modals -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Quiz Hosting Platform</h2>
+    <p><strong>Description:</strong> A responsive web application for creating and managing quizzes. Built with HTML, CSS, JavaScript, PHP, and MySQL.</p>
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>Dynamic quiz generation</li>
+      <li>User response storage</li>
+      <li>Automated score updates</li>
+    </ul>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+    <a href="https://github.com/chandanvura/Online-Hosting-Platform" target="_blank" class="btn">View Code on GitHub</a>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Job Portal Application</h2>
+    <p><strong>Description:</strong> A Java-based job portal with a MySQL database. Features secure authentication and optimized queries.</p>
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>Secure user authentication</li>
+      <li>Optimized database queries</li>
+      <li>Modular architecture</li>
+    </ul>
+    <p><strong>Technologies:</strong> Java, MySQL, JDBC</p>
+    <a href="https://github.com/yourprofile/job-portal" target="_blank" class="btn">View Code on GitHub</a>
+  </div>
+</div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+      <div class="social-links">
+        <a href="https://github.com/chandanvura" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/sri-chandan-vura-639188220/" target="_blank">
+          <img src="assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:srichandanvura@gmail.com">
+          <img src="assets/icons/email.png" alt="Email">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Chandan Vura. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

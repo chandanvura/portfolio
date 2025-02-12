@@ -1,0 +1,496 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav .nav-links li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav .nav-links li a:hover {
+    color: #ff6f61;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  .hero-text .btn {
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    animation: fadeInUp 2s ease;
+  }
+  
+  .hero-text .btn:hover {
+    background: #e65a50;
+  }
+  
+  .hero-image img {
+    width: 100px;
+    border-radius: 10%;
+    animation: fadeInRight 1s ease;
+  }
+  
+  /* About Section */
+  #about {
+    padding: 4rem 0;
+    background: #f4f4f4;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Skills Section */
+  #skills {
+    padding: 4rem 0;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .skill:hover {
+    background: #ff6f61;
+    transform: translateY(-10px);
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 4rem 0;
+    background: #f4f4f4;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .project h3 {
+    margin: 1rem 0;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 4rem 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links img {
+    width: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    #hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      margin-top: 2rem;
+      width: 200px;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+
+  /* Experience Page Styles */
+#experience {
+  padding: 4rem 0;
+}
+
+.experience-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+.experience-header {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.company {
+  color: #ff6f61;
+  font-weight: 500;
+}
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.experience-details li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-details li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #ff6f61;
+}
+
+/* Certifications Page Styles */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.certification-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+}
+
+.certification-icon {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.issuer {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.date {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Achievements Page Styles */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.achievement-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, #ff6f6133, transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.achievement-card:hover::before {
+  animation: achievementGlow 1.5s;
+}
+
+@keyframes achievementGlow {
+  0% { transform: rotate(45deg) translate(-50%, -50%); }
+  100% { transform: rotate(45deg) translate(50%, 50%); }
+}
+
+.achievement-badge {
+  font-size: 3rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.achievement-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-item,
+  .certification-card,
+  .achievement-card {
+    margin: 1rem 0;
+  }
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff6f61;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  margin: 1rem 0;
+}
+
+.modal ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.modal ul li {
+  margin: 0.5rem 0;
+}
+
+.modal .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.modal .btn:hover {
+  background: #e65a50;
+}
